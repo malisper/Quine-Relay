@@ -24,10 +24,10 @@
 
 ;; Here is what I passed to gen-quine in order to get the desired
 ;; program. It takes itself and writes a C program which prints
-;; itself. I had some issue with newlines, since a a literal string in
-;; C can't contain any newlines, so you may have to run the programs a
-;; couple times before they have the exact same formatting as the
-;; final ones.
+;; itself. I had some problems with newlines, since a a literal string
+;; in C can't contain any newlines, so you may have to run the
+;; programs a couple times before they have the exact same formatting
+;; as the final ones.
 (gen-quine '(lambda (self)
                        (format t "#include <stdio.h>~%int main ()~%{~%~%printf(\"%s\",~(~S~)~A"
                         (remove #\newline (prin1-to-string self)) ");
