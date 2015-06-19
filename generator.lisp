@@ -1,7 +1,7 @@
 ;; This is the code I used to create the quines. the function
 ;; gen-quine takes a quoted function of a single argument. It will
 ;; then generate a program which is equivalent to that function except
-;; called with itself the source for itself. For example the code
+;; called with the source for itself. For example the code
 ;;
 ;; (gen-quine '(lambda (x) (list x x)))
 ;; 
